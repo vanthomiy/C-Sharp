@@ -1,0 +1,11 @@
+C:\Projekte\Persistenz\Persistenz\bin\Debug\Persistenz.exe.config
+C:\Projekte\Persistenz\Persistenz\bin\Debug\Persistenz.exe
+C:\Projekte\Persistenz\Persistenz\bin\Debug\Persistenz.pdb
+C:\Projekte\Persistenz\Persistenz\bin\Debug\NDO.dll
+C:\Projekte\Persistenz\Persistenz\bin\Debug\NDOInterfaces.dll
+C:\Projekte\Persistenz\Persistenz\bin\Debug\SqlCeProvider.dll
+C:\Projekte\Persistenz\Persistenz\bin\Debug\System.Data.SqlServerCe.dll
+C:\Projekte\Persistenz\Persistenz\obj\Debug\Persistenz.csproj.CopyComplete
+C:\Projekte\Persistenz\Persistenz\obj\Debug\Persistenz.exe
+C:\Projekte\Persistenz\Persistenz\obj\Debug\Persistenz.pdb
+c:\projekte\Persistenz\Persistenz\obj\Debug\Persistenz.csprojAssemblyReference.cache

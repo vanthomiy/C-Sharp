@@ -1,0 +1,6 @@
+R:\DE_2027\projektdateien\02_01_Objektbeziehungen\02_01_Objektbeziehungen\bin\Debug\02_01_Objektbeziehungen.exe.config
+R:\DE_2027\projektdateien\02_01_Objektbeziehungen\02_01_Objektbeziehungen\bin\Debug\02_01_Objektbeziehungen.exe
+R:\DE_2027\projektdateien\02_01_Objektbeziehungen\02_01_Objektbeziehungen\bin\Debug\02_01_Objektbeziehungen.pdb
+R:\DE_2027\projektdateien\02_01_Objektbeziehungen\02_01_Objektbeziehungen\obj\Debug\02_01_Objektbeziehungen.csprojAssemblyReference.cache
+R:\DE_2027\projektdateien\02_01_Objektbeziehungen\02_01_Objektbeziehungen\obj\Debug\02_01_Objektbeziehungen.exe
+R:\DE_2027\projektdateien\02_01_Objektbeziehungen\02_01_Objektbeziehungen\obj\Debug\02_01_Objektbeziehungen.pdb

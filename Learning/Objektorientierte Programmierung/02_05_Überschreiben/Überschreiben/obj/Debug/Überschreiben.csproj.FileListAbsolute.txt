@@ -1,0 +1,6 @@
+R:\DE_2027\projektdateien\Überschreiben\Überschreiben\bin\Debug\Überschreiben.exe.config
+R:\DE_2027\projektdateien\Überschreiben\Überschreiben\bin\Debug\Überschreiben.exe
+R:\DE_2027\projektdateien\Überschreiben\Überschreiben\bin\Debug\Überschreiben.pdb
+R:\DE_2027\projektdateien\Überschreiben\Überschreiben\obj\Debug\Überschreiben.csprojAssemblyReference.cache
+R:\DE_2027\projektdateien\Überschreiben\Überschreiben\obj\Debug\Überschreiben.exe
+R:\DE_2027\projektdateien\Überschreiben\Überschreiben\obj\Debug\Überschreiben.pdb

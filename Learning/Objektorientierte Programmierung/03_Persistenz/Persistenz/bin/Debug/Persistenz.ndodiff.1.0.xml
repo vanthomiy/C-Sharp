@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NdoSchemaTransitions schemaVersion="1.0.4">
+  <!--NDO accumulates all schema changes in this diff file. Note: If you change the mapping schema version, a new diff file will be created. You can change the mapping schema version in the NDO configuration dialog. Don't use the Mapping Tool to change the schema information, because it will be overwritten by the value set in the configuration. For automatic builds set the schema version value in the .ndoproj file.-->
+  <NdoSchemaTransition schemaVersion="1.0.1">
+    <CreateTable name="Mitarbeiter">
+      <CreateColumn name="ID" type="System.Int32,mscorlib" isPrimary="true" autoIncrement="true" />
+      <CreateColumn name="Vorname" type="System.String,mscorlib" allowNull="True" />
+      <CreateColumn name="Nachname" type="System.String,mscorlib" allowNull="True" />
+    </CreateTable>
+    <CreateTable name="Reise">
+      <CreateColumn name="ID" type="System.Int32,mscorlib" isPrimary="true" autoIncrement="true" />
+      <CreateColumn name="Zweck" type="System.String,mscorlib" allowNull="True" />
+      <CreateColumn name="IDMitarbeiter" type="System.Int32,mscorlib" />
+    </CreateTable>
+  </NdoSchemaTransition>
+  <NdoSchemaTransition schemaVersion="1.0.2">
+    <CreateTable name="relKostenpunktReise">
+      <CreateColumn name="IDReise" type="System.Int32,mscorlib" />
+      <CreateColumn name="IDKostenpunkt" type="System.Int32,mscorlib" />
+      <CreateColumn name="TCKostenpunkt" type="System.Int32,mscorlib" />
+    </CreateTable>
+    <CreateTable name="Beleg">
+      <CreateColumn name="ID" type="System.Int32,mscorlib" isPrimary="true" autoIncrement="true" />
+      <CreateColumn name="Text" type="System.String,mscorlib" allowNull="True" />
+      <CreateColumn name="Betrag" type="System.Decimal,mscorlib" allowNull="True" />
+      <CreateColumn name="Datum" type="System.DateTime,mscorlib" allowNull="True" />
+    </CreateTable>
+    <CreateTable name="KmPauschale">
+      <CreateColumn name="ID" type="System.Int32,mscorlib" isPrimary="true" autoIncrement="true" />
+      <CreateColumn name="AnzahlKm" type="System.Int32,mscorlib" allowNull="True" />
+      <CreateColumn name="Datum" type="System.DateTime,mscorlib" allowNull="True" />
+    </CreateTable>
+    <CreateTable name="Tagespauschale">
+      <CreateColumn name="ID" type="System.Int32,mscorlib" isPrimary="true" autoIncrement="true" />
+      <CreateColumn name="StartDatum" type="System.DateTime,mscorlib" allowNull="True" />
+      <CreateColumn name="Datum" type="System.DateTime,mscorlib" allowNull="True" />
+    </CreateTable>
+  </NdoSchemaTransition>
+  <NdoSchemaTransition schemaVersion="1.0.3">
+    <AlterTable name="Reise">
+      <AddColumn name="Zweck1" type="System.String,mscorlib" allowNull="True" />
+      <DropColumn name="Zweck" />
+      <!--If you need to rename a column use the following syntax:-->
+      <!--<RenameColumn oldName="..." newName="..." />-->
+    </AlterTable>
+  </NdoSchemaTransition>
+  <NdoSchemaTransition schemaVersion="1.0.4">
+    <AlterTable name="Reise">
+      <AddColumn name="IDLand" type="System.Int32,mscorlib" />
+    </AlterTable>
+    <CreateTable name="Land">
+      <CreateColumn name="ID" type="System.Int32,mscorlib" isPrimary="true" autoIncrement="true" />
+      <CreateColumn name="Name" type="System.String,mscorlib" allowNull="True" />
+    </CreateTable>
+  </NdoSchemaTransition>
+</NdoSchemaTransitions>

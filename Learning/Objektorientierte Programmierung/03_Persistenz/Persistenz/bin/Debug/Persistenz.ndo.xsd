@@ -1,0 +1,105 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msdata:EnforceConstraints="False">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Beleg">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" type="xs:int" />
+              <xs:element name="Datum" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Betrag" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Text" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="KmPauschale">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" type="xs:int" />
+              <xs:element name="AnzahlKm" type="xs:int" minOccurs="0" />
+              <xs:element name="Datum" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Land">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" type="xs:int" />
+              <xs:element name="Name" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Mitarbeiter">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" type="xs:int" />
+              <xs:element name="Nachname" type="xs:string" minOccurs="0" />
+              <xs:element name="Vorname" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Reise">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" type="xs:int" />
+              <xs:element name="Zweck1" type="xs:string" minOccurs="0" />
+              <xs:element name="IDLand" type="xs:int" minOccurs="0" />
+              <xs:element name="IDMitarbeiter" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="relKostenpunktReise">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDReise" type="xs:int" minOccurs="0" />
+              <xs:element name="IDKostenpunkt" type="xs:int" minOccurs="0" />
+              <xs:element name="TCKostenpunkt" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Tagespauschale">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" type="xs:int" />
+              <xs:element name="Datum" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="StartDatum" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//Beleg" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="KmPauschale_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//KmPauschale" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="Land_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//Land" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="Mitarbeiter_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//Mitarbeiter" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="Reise_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//Reise" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="Tagespauschale_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//Tagespauschale" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:keyref name="LandReise" refer="Land_Constraint1" msdata:DeleteRule="None">
+      <xs:selector xpath=".//Reise" />
+      <xs:field xpath="IDLand" />
+    </xs:keyref>
+    <xs:keyref name="MitarbeiterReise" refer="Mitarbeiter_Constraint1" msdata:DeleteRule="None">
+      <xs:selector xpath=".//Reise" />
+      <xs:field xpath="IDMitarbeiter" />
+    </xs:keyref>
+  </xs:element>
+</xs:schema>
